@@ -9,7 +9,7 @@ service cloud.firestore {
       // Solo el admin puede crear, actualizar o eliminar
       // Reemplaza el email con tu correo real de administrador
       allow create, update, delete: if request.auth != null
-        && request.auth.token.email == "REEMPLAZA_CON_TU_EMAIL_ADMIN";
+        && request.auth.token.email == "factorartificialgames@gmail.com";
     }
 
     // Denegar todo lo demás por defecto
