@@ -23,11 +23,16 @@ export const Home = () => {
   return (
     <div>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-primary-800 to-primary-900 text-white py-20 px-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 leading-tight">
-            Repositorio Científico Universitario
+      <section className="bg-ub-navy text-white py-20 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-ub-navy via-primary-800 to-primary-600 opacity-90" />
+        <div className="relative max-w-3xl mx-auto text-center">
+          <img src="/Biblioteca-digital/logo.png" alt="Universidades Bravo" className="h-24 w-auto mx-auto mb-6 drop-shadow-lg" />
+          <h1 className="text-4xl md:text-5xl font-serif font-bold mb-3 leading-tight">
+            Biblioteca Digital
           </h1>
+          <p className="text-ub-light font-medium tracking-wide uppercase text-sm mb-4">
+            Universidades Bravo
+          </p>
           <p className="text-lg text-blue-200 mb-10 leading-relaxed">
             Accede a artículos, tesis, revistas y documentos académicos de todas las áreas del conocimiento.
           </p>
@@ -48,7 +53,7 @@ export const Home = () => {
             <button
               key={sec.id}
               onClick={() => navigate(`/browse?section=${sec.id}`)}
-              className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-primary-300 hover:bg-primary-50 transition-all group p-6 text-left"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md hover:border-ub-blue hover:bg-blue-50 transition-all group p-6 text-left"
             >
               <span className="text-3xl mb-3 block">{SECTION_ICONS[sec.id] ?? '📁'}</span>
               <h3 className="font-semibold text-gray-800 group-hover:text-primary-700 transition-colors text-sm leading-snug">
@@ -70,7 +75,7 @@ export const Home = () => {
           </p>
           <button
             onClick={() => navigate('/browse')}
-            className="bg-primary-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors"
+            className="bg-ub-navy text-white px-8 py-3 rounded-lg font-medium hover:bg-primary-800 transition-colors"
           >
             Ver todos los documentos
           </button>
