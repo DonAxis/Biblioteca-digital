@@ -1,19 +1,16 @@
 export const Footer = () => (
-  <footer className="bg-ub-navy text-gray-300 py-10 mt-auto">
-    <div className="max-w-7xl mx-auto px-4 text-center">
-      <div className="flex justify-center mb-4">
-        <img src="/Biblioteca-digital/logo.png" alt="Universidades Bravo" className="h-14 w-auto opacity-90" />
-      </div>
-      <p className="font-serif text-lg font-semibold text-white mb-1">
-        Biblioteca Digital — Universidades Bravo
-      </p>
-      <p className="text-sm text-ub-light">
-        Acceso a recursos científicos y académicos para la comunidad universitaria.
-      </p>
-      <div className="border-t border-white/10 mt-6 pt-4">
-        <p className="text-xs text-gray-500">
-          © {new Date().getFullYear()} Universidades Bravo. Todos los derechos reservados.
-        </p>
+  <footer className="bg-hall-dark text-gray-400 py-10 mt-auto">
+    <div className="max-w-7xl mx-auto px-4">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div className="text-center md:text-left">
+          <p className="font-serif text-hall-gold font-bold text-xl">HALL</p>
+          <p className="text-xs text-gray-500 tracking-widest uppercase mt-1">Repositorio Científico</p>
+          <p className="text-xs text-gray-600 italic mt-1">Conocimiento y tecnología; firmes y dignos</p>
+        </div>
+        <div className="text-center text-xs text-gray-600 space-y-1">
+          <p>Plataforma de acceso abierto a recursos científicos y académicos.</p>
+          <p>© {new Date().getFullYear()} HALL. Todos los derechos reservados.</p>
+        </div>
       </div>
     </div>
   </footer>

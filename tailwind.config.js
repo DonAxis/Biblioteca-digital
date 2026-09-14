@@ -8,22 +8,22 @@ export default {
     extend: {
       colors: {
         primary: {
-          50:  '#eef2ff',
-          100: '#dce6fd',
-          200: '#b9ccfb',
-          300: '#8aabf7',
-          400: '#6090f2',
-          500: '#3b6fe8',
-          600: '#1e4fd8',
-          700: '#1a3fbe',
-          800: '#0d1b5e',
-          900: '#0a1448',
+          50:  '#f8f6f0',
+          100: '#ede8d8',
+          200: '#d9cfb0',
+          300: '#c9a84c',
+          400: '#b8963e',
+          500: '#a07c2e',
+          600: '#856420',
+          700: '#1a2744',
+          800: '#131e36',
+          900: '#0d1424',
         },
-        ub: {
-          navy:  '#0d1b5e',
-          blue:  '#1e4fd8',
-          light: '#60a5fa',
-          white: '#ffffff',
+        hall: {
+          navy:  '#1a2744',
+          gold:  '#c9a84c',
+          cream: '#f5f0e8',
+          dark:  '#0d1424',
         },
       },
       fontFamily: {

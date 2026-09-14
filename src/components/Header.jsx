@@ -12,35 +12,38 @@ export const Header = () => {
   }
 
   return (
-    <header className="bg-ub-navy text-white shadow-lg">
+    <header className="bg-hall-navy text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/Biblioteca-digital/logo.png" alt="Universidades Bravo" className="h-12 w-auto flex-shrink-0" />
+          {/* Logo HALL — reemplazar con <img> cuando el archivo esté disponible */}
+          <div className="w-11 h-11 bg-hall-gold rounded flex items-center justify-center flex-shrink-0">
+            <span className="text-hall-navy font-serif font-black text-lg">H</span>
+          </div>
           <div className="leading-tight">
-            <p className="text-xs text-ub-light font-medium tracking-wide uppercase">Universidades Bravo</p>
-            <p className="text-lg font-serif font-bold">Biblioteca Digital</p>
+            <p className="text-hall-gold font-serif font-bold text-lg tracking-wide">HALL</p>
+            <p className="text-gray-300 text-xs tracking-widest uppercase">Repositorio Científico</p>
           </div>
         </Link>
 
-        <nav className="flex items-center gap-4 flex-wrap">
-          <Link to="/" className="hover:text-blue-200 transition-colors text-sm">Inicio</Link>
-          <Link to="/browse" className="hover:text-blue-200 transition-colors text-sm">Explorar</Link>
+        <nav className="flex items-center gap-5 flex-wrap">
+          <Link to="/" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Inicio</Link>
+          <Link to="/browse" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Explorar</Link>
           {isAdmin && (
             <Link
               to="/admin"
-              className="bg-yellow-400 text-primary-900 px-3 py-1 rounded font-medium text-sm hover:bg-yellow-300 transition-colors"
+              className="bg-hall-gold text-hall-navy px-3 py-1 rounded font-semibold text-sm hover:brightness-110 transition-all"
             >
               Admin
             </Link>
           )}
           {currentUser ? (
             <div className="flex items-center gap-3">
-              <span className="text-xs text-blue-200 hidden sm:block max-w-[180px] truncate">
+              <span className="text-xs text-gray-400 hidden sm:block max-w-[180px] truncate">
                 {currentUser.email}
               </span>
               <button
                 onClick={handleLogout}
-                className="border border-white text-white px-3 py-1 rounded text-sm hover:bg-white hover:text-primary-800 transition-colors"
+                className="border border-gray-500 text-gray-300 px-3 py-1 rounded text-sm hover:border-hall-gold hover:text-hall-gold transition-colors"
               >
                 Salir
               </button>
@@ -48,7 +51,7 @@ export const Header = () => {
           ) : (
             <Link
               to="/login"
-              className="bg-white text-primary-800 px-4 py-1.5 rounded font-medium text-sm hover:bg-blue-50 transition-colors"
+              className="bg-hall-gold text-hall-navy px-4 py-1.5 rounded font-semibold text-sm hover:brightness-110 transition-all"
             >
               Iniciar sesión
             </Link>
