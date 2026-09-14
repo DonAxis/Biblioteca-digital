@@ -100,19 +100,39 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Instituciones colaboradoras */}
-      <section className="border-t border-gray-100 bg-gray-50 py-12 px-4">
-        <div className="max-w-5xl mx-auto text-center">
-          <p className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-8">
-            Instituciones colaboradoras
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-10">
+      {/* Instituciones colaboradoras — estilo europepmc */}
+      <section className="border-t border-gray-200 bg-white py-10 px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-4 mb-8">
+            <div className="flex-1 h-px bg-gray-200" />
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest whitespace-nowrap">
+              Instituciones colaboradoras
+            </p>
+            <div className="flex-1 h-px bg-gray-200" />
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-12">
             {COLLABORATORS.map(inst => (
-              <div key={inst.name} className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity">
-                <img src={inst.logo} alt={inst.name} className="h-16 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
-                <p className="text-xs text-gray-500 font-medium">{inst.name}</p>
+              <div
+                key={inst.name}
+                className="flex flex-col items-center gap-2 group cursor-default"
+                title={inst.name}
+              >
+                <img
+                  src={inst.logo}
+                  alt={inst.name}
+                  className="h-14 w-auto object-contain grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                />
+                <p className="text-[11px] text-gray-400 group-hover:text-gray-600 transition-colors font-medium">
+                  {inst.name}
+                </p>
               </div>
             ))}
+            {/* Placeholder para más instituciones */}
+            <div className="flex flex-col items-center gap-2 opacity-30">
+              <div className="h-14 w-24 border-2 border-dashed border-gray-300 rounded flex items-center justify-center">
+                <span className="text-gray-400 text-xs">+ Próxima</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
