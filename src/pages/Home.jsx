@@ -15,7 +15,7 @@ const SECTION_ICONS = {
 
 const COLLABORATORS = [
   { name: 'Universidades Bravo', logo: '/Biblioteca-digital/logo.png' },
-  // Agrega más instituciones aquí
+  { name: 'Instituto Leonardo Bravo', logo: '/Biblioteca-digital/ilblogo.png' },
 ]
 
 export const Home = () => {
