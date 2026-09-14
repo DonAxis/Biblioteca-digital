@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { getDocument, incrementDownloads } from '../firebase/firestore'
 import { PDFViewer } from '../components/PDFViewer'
-import { SECTIONS } from '../constants'
+import { SECTIONS, DOCUMENT_TYPES, LICENSES } from '../constants'
 
 const formatSize = (bytes) => {
   if (!bytes) return ''
@@ -58,7 +58,9 @@ export const Document = () => {
     )
   }
 
-  const sectionLabel = SECTIONS.find(s => s.id === doc.section)?.label ?? doc.section
+  const sectionLabel  = SECTIONS.find(s => s.id === doc.section)?.label ?? doc.section
+  const docTypeLabel  = DOCUMENT_TYPES.find(t => t.id === doc.docType)?.label ?? ''
+  const licenseLabel  = LICENSES.find(l => l.id === doc.license)?.label ?? ''
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
@@ -71,10 +73,15 @@ export const Document = () => {
 
       {/* Metadata */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 mb-6">
-        <div className="flex items-center gap-2 mb-4">
-          <span className="text-xs font-medium text-primary-700 bg-primary-50 px-3 py-1 rounded-full">
+        <div className="flex flex-wrap items-center gap-2 mb-4">
+          <span className="text-xs font-medium text-hall-navy bg-hall-cream px-3 py-1 rounded-full border border-hall-gold/30">
             {sectionLabel}
           </span>
+          {docTypeLabel && (
+            <span className="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+              {docTypeLabel}
+            </span>
+          )}
           <span className="text-xs text-gray-400">{doc.year}</span>
         </div>
 
@@ -100,6 +107,28 @@ export const Document = () => {
                 </span>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Info legal y procedencia */}
+        {(licenseLabel || doc.doi || doc.source) && (
+          <div className="mb-5 bg-gray-50 rounded-lg p-4 space-y-1.5">
+            <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Derechos y procedencia</h2>
+            {licenseLabel && (
+              <p className="text-xs text-gray-600">
+                <span className="font-medium">Licencia:</span> {licenseLabel}
+              </p>
+            )}
+            {doc.doi && (
+              <p className="text-xs text-gray-600 font-mono">
+                <span className="font-sans font-medium">DOI/ISBN:</span> {doc.doi}
+              </p>
+            )}
+            {doc.source && (
+              <p className="text-xs text-gray-600">
+                <span className="font-medium">Fuente:</span> {doc.source}
+              </p>
+            )}
           </div>
         )}
 
