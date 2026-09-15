@@ -17,14 +17,22 @@ export const Header = () => {
         <Link to="/" className="flex items-center gap-3">
           <img src="/Biblioteca-digital/logoHall.png" alt="HALL" className="h-12 w-auto flex-shrink-0" />
           <div className="leading-tight">
-            <p className="text-hall-gold font-serif font-bold text-lg tracking-wide">HALL Centro de Investigación</p>
-            <p className="text-gray-300 text-xs tracking-widest uppercase">Repositorio Científico</p>
+            <p className="text-hall-gold font-serif font-bold text-lg tracking-wide">HALL Educación Digital</p>
+            <p className="text-gray-300 text-xs tracking-widest uppercase">Biblioteca Digital</p>
           </div>
         </Link>
 
         <nav className="flex items-center gap-5 flex-wrap">
           <Link to="/" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Inicio</Link>
-          <Link to="/browse" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Explorar</Link>
+          <Link to="/browse" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Biblioteca</Link>
+          <a
+            href="https://donaxis.github.io/NotiWeb/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-gray-300 hover:text-hall-gold transition-colors"
+          >
+            Noticias
+          </a>
           {isAdmin && (
             <Link
               to="/admin"

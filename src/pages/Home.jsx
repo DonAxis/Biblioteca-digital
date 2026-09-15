@@ -37,7 +37,7 @@ export const Home = () => {
             Repositorio Científico Universitario
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
-            HALL Centro de Investigación
+            HALL Educación Digital
           </h1>
           <p className="text-gray-300 text-base mb-10 leading-relaxed max-w-xl mx-auto">
             Acceso abierto a artículos científicos, tesis, revistas y documentos académicos
@@ -97,6 +97,41 @@ export const Home = () => {
               </p>
             </button>
           ))}
+        </div>
+      </section>
+
+      {/* Plataformas HALL */}
+      <section className="bg-hall-navy py-12 px-4">
+        <div className="max-w-5xl mx-auto text-center">
+          <p className="text-hall-gold text-xs font-semibold uppercase tracking-widest mb-2">
+            Ecosistema HALL Educación Digital
+          </p>
+          <h2 className="text-white font-serif text-xl font-bold mb-8">
+            Más plataformas disponibles
+          </h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="bg-white/10 border border-hall-gold/30 rounded-xl p-6 w-64 text-left hover:bg-white/15 transition-all">
+              <p className="text-hall-gold font-bold text-lg mb-1">📚 Biblioteca Digital</p>
+              <p className="text-gray-300 text-sm mb-3">
+                Repositorio científico — artículos, tesis, revistas y documentos académicos.
+              </p>
+              <span className="text-xs text-hall-gold/70">Estás aquí</span>
+            </div>
+            <a
+              href="https://donaxis.github.io/NotiWeb/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white/10 border border-white/20 rounded-xl p-6 w-64 text-left hover:bg-white/15 hover:border-hall-gold/30 transition-all group"
+            >
+              <p className="text-white font-bold text-lg mb-1 group-hover:text-hall-gold transition-colors">📰 NotiWeb</p>
+              <p className="text-gray-300 text-sm mb-3">
+                Portal de noticias y actualidad del ecosistema HALL.
+              </p>
+              <span className="text-xs text-hall-gold flex items-center gap-1">
+                Visitar →
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
