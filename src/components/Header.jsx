@@ -15,12 +15,9 @@ export const Header = () => {
     <header className="bg-hall-navy text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between flex-wrap gap-3">
         <Link to="/" className="flex items-center gap-3">
-          {/* Logo HALL — reemplazar con <img> cuando el archivo esté disponible */}
-          <div className="w-11 h-11 bg-hall-gold rounded flex items-center justify-center flex-shrink-0">
-            <span className="text-hall-navy font-serif font-black text-lg">H</span>
-          </div>
+          <img src="/Biblioteca-digital/logoHall.png" alt="HALL" className="h-12 w-auto flex-shrink-0" />
           <div className="leading-tight">
-            <p className="text-hall-gold font-serif font-bold text-lg tracking-wide">HALL</p>
+            <p className="text-hall-gold font-serif font-bold text-lg tracking-wide">HALL Centro de Investigación</p>
             <p className="text-gray-300 text-xs tracking-widest uppercase">Repositorio Científico</p>
           </div>
         </Link>

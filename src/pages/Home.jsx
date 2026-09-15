@@ -37,7 +37,7 @@ export const Home = () => {
             Repositorio Científico Universitario
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-4 leading-tight">
-            HALL
+            HALL Centro de Investigación
           </h1>
           <p className="text-gray-300 text-base mb-10 leading-relaxed max-w-xl mx-auto">
             Acceso abierto a artículos científicos, tesis, revistas y documentos académicos
