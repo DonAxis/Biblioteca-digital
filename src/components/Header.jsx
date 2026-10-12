@@ -25,6 +25,7 @@ export const Header = () => {
         <nav className="flex items-center gap-5 flex-wrap">
           <Link to="/" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Inicio</Link>
           <Link to="/browse" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Biblioteca</Link>
+          <Link to="/orientacion" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Orientación</Link>
           <a
             href="https://donaxis.github.io/NotiWeb/"
             target="_blank"

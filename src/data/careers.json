@@ -1,0 +1,104 @@
+[
+  {
+    "id": "negocios-internacionales",
+    "nombre": "Licenciatura en Negocios Internacionales",
+    "institucion": "Instituto Leonardo Bravo",
+    "periodos": 8,
+    "tipoPeriodo": "semestre",
+    "areas": {
+      "matematicas": 7,
+      "ciencias_exactas": 1,
+      "tecnologia": 4,
+      "negocios": 10,
+      "derecho": 7,
+      "humanidades": 6,
+      "ciencias_sociales": 5,
+      "investigacion": 5
+    }
+  },
+  {
+    "id": "contador-publico",
+    "nombre": "Licenciatura en Contador Público",
+    "institucion": "Instituto Leonardo Bravo",
+    "periodos": 8,
+    "tipoPeriodo": "semestre",
+    "areas": {
+      "matematicas": 8,
+      "ciencias_exactas": 1,
+      "tecnologia": 4,
+      "negocios": 9,
+      "derecho": 9,
+      "humanidades": 3,
+      "ciencias_sociales": 4,
+      "investigacion": 5
+    }
+  },
+  {
+    "id": "ingenieria-computo",
+    "nombre": "Ingeniería en Cómputo",
+    "institucion": "Instituto Leonardo Bravo",
+    "periodos": 8,
+    "tipoPeriodo": "semestre",
+    "areas": {
+      "matematicas": 9,
+      "ciencias_exactas": 4,
+      "tecnologia": 10,
+      "negocios": 5,
+      "derecho": 3,
+      "humanidades": 3,
+      "ciencias_sociales": 3,
+      "investigacion": 6
+    }
+  },
+  {
+    "id": "administracion-industrial",
+    "nombre": "Licenciatura en Administración Industrial",
+    "institucion": "Instituto Leonardo Bravo",
+    "periodos": 8,
+    "tipoPeriodo": "semestre",
+    "areas": {
+      "matematicas": 8,
+      "ciencias_exactas": 5,
+      "tecnologia": 4,
+      "negocios": 9,
+      "derecho": 5,
+      "humanidades": 3,
+      "ciencias_sociales": 6,
+      "investigacion": 5
+    }
+  },
+  {
+    "id": "criminologia-derecho-digital",
+    "nombre": "Licenciatura en Criminología y Derecho Digital",
+    "institucion": "Instituto Leonardo Bravo",
+    "periodos": 9,
+    "tipoPeriodo": "cuatrimestre",
+    "areas": {
+      "matematicas": 2,
+      "ciencias_exactas": 2,
+      "tecnologia": 7,
+      "negocios": 2,
+      "derecho": 10,
+      "humanidades": 5,
+      "ciencias_sociales": 8,
+      "investigacion": 6
+    }
+  },
+  {
+    "id": "finanzas-banca-digital",
+    "nombre": "Finanzas y Banca Digital",
+    "institucion": "Instituto Leonardo Bravo",
+    "periodos": 9,
+    "tipoPeriodo": "cuatrimestre",
+    "areas": {
+      "matematicas": 9,
+      "ciencias_exactas": 1,
+      "tecnologia": 6,
+      "negocios": 9,
+      "derecho": 6,
+      "humanidades": 2,
+      "ciencias_sociales": 4,
+      "investigacion": 5
+    }
+  }
+]

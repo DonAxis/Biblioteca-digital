@@ -3,11 +3,12 @@ import { AuthProvider } from './contexts/AuthContext'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { ProtectedRoute } from './components/ProtectedRoute'
-import { Home }     from './pages/Home'
-import { Browse }   from './pages/Browse'
-import { Document } from './pages/Document'
-import { Login }    from './pages/Login'
-import { Admin }    from './pages/Admin'
+import { Home }        from './pages/Home'
+import { Browse }      from './pages/Browse'
+import { Document }    from './pages/Document'
+import { Login }       from './pages/Login'
+import { Admin }       from './pages/Admin'
+import { Orientacion } from './pages/Orientacion'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Routes>
               <Route path="/"              element={<Home />} />
               <Route path="/login"         element={<Login />} />
+              <Route path="/orientacion"   element={<Orientacion />} />
               <Route path="/browse"        element={<ProtectedRoute><Browse /></ProtectedRoute>} />
               <Route path="/document/:id"  element={<ProtectedRoute><Document /></ProtectedRoute>} />
               <Route path="/admin"         element={<ProtectedRoute><Admin /></ProtectedRoute>} />
