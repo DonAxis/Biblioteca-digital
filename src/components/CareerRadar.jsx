@@ -18,17 +18,17 @@ export const AREA_LABELS = {
   investigacion:    'Investigación',
 }
 
-export const CareerRadar = ({ areas, avoidAreas = [], size = 'sm' }) => {
+export const CareerRadar = ({ areas, avoidAreas = [], preferAreas = [], size = 'sm' }) => {
   const height = size === 'lg' ? 360 : 210
   const fontSize = size === 'lg' ? 12 : 9
 
   const data = Object.entries(areas).map(([key, value]) => ({
-    area:       AREA_LABELS[key],
+    area:         AREA_LABELS[key],
     key,
     value,
-    // overlay rojo solo en áreas evitadas con score >= 5
-    avoidValue: avoidAreas.includes(key) && value >= 5 ? value : 0,
-    fullMark:   10,
+    avoidValue:   avoidAreas.includes(key) && value >= 5 ? value : 0,
+    preferValue:  preferAreas.includes(key) ? value : 0,
+    fullMark:     10,
   }))
 
   return (
@@ -49,6 +49,17 @@ export const CareerRadar = ({ areas, avoidAreas = [], size = 'sm' }) => {
           fillOpacity={0.45}
           dot={false}
         />
+
+        {/* overlay verde para áreas preferidas */}
+        {preferAreas.length > 0 && (
+          <Radar
+            dataKey="preferValue"
+            stroke="#16a34a"
+            fill="#16a34a"
+            fillOpacity={0.25}
+            dot={false}
+          />
+        )}
 
         {/* overlay rojo para áreas evitadas con score alto */}
         {avoidAreas.length > 0 && (
