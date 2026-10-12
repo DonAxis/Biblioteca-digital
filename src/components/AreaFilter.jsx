@@ -1,16 +1,5 @@
 import { AREA_LABELS } from './CareerRadar'
 
-const AREA_ICONS = {
-  matematicas:       '📐',
-  ciencias_exactas:  '🔬',
-  tecnologia:        '💻',
-  negocios:          '📊',
-  derecho:           '⚖️',
-  humanidades:       '📜',
-  ciencias_sociales: '🌐',
-  investigacion:     '🔍',
-}
-
 export const AreaFilter = ({ avoidAreas, onChange }) => {
   const toggle = (key) => {
     onChange(
@@ -51,7 +40,6 @@ export const AreaFilter = ({ avoidAreas, onChange }) => {
                   : 'bg-white border-gray-300 text-gray-600 hover:border-hall-navy hover:text-hall-navy'
               }`}
             >
-              <span>{AREA_ICONS[key]}</span>
               <span>{AREA_LABELS[key]}</span>
               {active && <span className="text-red-500 font-bold leading-none">✕</span>}
             </button>

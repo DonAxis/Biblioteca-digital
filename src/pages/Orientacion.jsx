@@ -14,8 +14,8 @@ const calcCompatibilidad = (career, avoidAreas) => {
   if (conflicts.length === 0) return { nivel: 'verde', label: 'Compatible' }
 
   const top = conflicts[0]
-  if (top.score >= 7) return { nivel: 'rojo',     label: `Alto nivel de ${AREA_LABELS[top.key]}` }
-  return                       { nivel: 'amarillo', label: `Revisa ${AREA_LABELS[top.key]}` }
+  if (top.score >= 7) return { nivel: 'rojo',     label: `alto en ${AREA_LABELS[top.key]}` }
+  return                       { nivel: 'amarillo', label: `tiene poco ${AREA_LABELS[top.key]}` }
 }
 
 const NIVEL_ORDER = { verde: 0, neutral: 1, amarillo: 2, rojo: 3 }
