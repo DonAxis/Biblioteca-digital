@@ -9,7 +9,7 @@ Repositorio científico para la universidad. Frontend estático en GitHub Pages,
 - GitHub Actions para deploy automático
 
 ## URL producción
-`https://DonAxis.github.io/Biblioteca-digital/`
+`https://digitalhall.com.mx`
 
 ## Estructura
 ```
@@ -41,7 +41,7 @@ VITE_ADMIN_EMAIL      ← email del administrador que puede subir PDFs
 ## Firebase — pasos de configuración (una sola vez)
 1. Crear proyecto en console.firebase.google.com
 2. Habilitar Auth → Email/Password
-3. Agregar `donaxis.github.io` en Auth → Authorized domains
+3. Agregar `digitalhall.com.mx` en Auth → Authorized domains
 4. Crear Firestore en modo producción
 5. Habilitar Storage en modo producción
 6. Agregar app web y copiar config a `.env.local` y GitHub Secrets
@@ -49,10 +49,10 @@ VITE_ADMIN_EMAIL      ← email del administrador que puede subir PDFs
 8. Desplegar reglas: `firebase deploy --only firestore,storage`
 
 ## Firebase — CORS para Storage (obligatorio en producción)
-Sin esto los PDFs no se cargan desde GitHub Pages:
+Sin esto los PDFs no se cargan desde el dominio custom:
 ```bash
 # Crear cors.json
-[{"origin": ["https://DonAxis.github.io"], "method": ["GET"], "maxAgeSeconds": 3600}]
+[{"origin": ["https://digitalhall.com.mx"], "method": ["GET"], "maxAgeSeconds": 3600}]
 # Aplicar
 gsutil cors set cors.json gs://TU_STORAGE_BUCKET
 ```
