@@ -174,7 +174,7 @@ export const Home = () => {
 
       {/* Pie informativo */}
       <section className="bg-hall-cream border-t border-gray-200 py-10 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
           <div>
             <p className="text-3xl font-serif font-bold text-hall-navy">∞</p>
             <p className="text-sm text-gray-500 mt-1">Acceso abierto</p>
@@ -182,10 +182,6 @@ export const Home = () => {
           <div>
             <p className="text-3xl font-serif font-bold text-hall-navy">8</p>
             <p className="text-sm text-gray-500 mt-1">Áreas del conocimiento</p>
-          </div>
-          <div>
-            <p className="text-3xl font-serif font-bold text-hall-navy">UB</p>
-            <p className="text-sm text-gray-500 mt-1">Institución fundadora</p>
           </div>
         </div>
       </section>

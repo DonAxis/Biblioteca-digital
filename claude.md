@@ -73,6 +73,13 @@ Los usuarios se autentican vía Moodle (unibravo.org/moodle). El flujo planeado:
 - La app llama `signInWithCustomToken(auth, token)` automáticamente
 - El código para esto ya está en src/pages/Login.jsx y src/firebase/auth.js
 
+## Proyecto hermano: DigitalHall Campus (cursos) — en desarrollo
+- URL: `https://campus.digitalhall.com.mx` (portada publicada, nov 2026)
+- Proyecto **separado**: repo `github.com/DonAxis/digitalhall-campus`, Firebase propio (`digitalhall-campus`), Firebase Hosting (no GitHub Pages).
+- Se construye en **otra sesión de VS Code** (`D:\trabajando\cursitos\plataforma`). Desde aquí **no se toca su código**; los cambios se piden a través del usuario.
+- Nombre de marca aún no definitivo ("HALL Campus" provisional). Usa el mismo logo (`/logoHall.png`).
+- Desde la biblioteca solo se enlaza a Campus (header / sección de plataformas en Home).
+
 ## Secciones disponibles
 Ciencias Básicas · Ingeniería y Tecnología · Ciencias de la Salud · Ciencias Sociales · Humanidades · Computación/TI · Tesis y Grado · Revistas y Artículos
 
