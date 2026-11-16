@@ -9,6 +9,7 @@ import { Document }    from './pages/Document'
 import { Login }       from './pages/Login'
 import { Admin }       from './pages/Admin'
 import { Orientacion } from './pages/Orientacion'
+import { Biblioteca }  from './pages/Biblioteca'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
               <Route path="/"              element={<Home />} />
               <Route path="/login"         element={<Login />} />
               <Route path="/orientacion"   element={<Orientacion />} />
+              <Route path="/biblioteca"    element={<Biblioteca />} />
               <Route path="/browse"        element={<ProtectedRoute><Browse /></ProtectedRoute>} />
               <Route path="/document/:id"  element={<ProtectedRoute><Document /></ProtectedRoute>} />
               <Route path="/admin"         element={<ProtectedRoute><Admin /></ProtectedRoute>} />

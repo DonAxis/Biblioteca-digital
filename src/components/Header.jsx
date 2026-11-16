@@ -17,15 +17,23 @@ export const Header = () => {
         <Link to="/" className="flex items-center gap-3">
           <img src="/logoHall.png" alt="HALL" className="h-12 w-auto flex-shrink-0" />
           <div className="leading-tight">
-            <p className="text-hall-gold font-serif font-bold text-lg tracking-wide">HALL Educación Digital</p>
-            <p className="text-gray-300 text-xs tracking-widest uppercase">Biblioteca Digital</p>
+            <p className="text-hall-gold font-serif font-bold text-xl tracking-widest">HALL</p>
+            <p className="text-gray-300 text-xs tracking-wide italic">Tu sala de estudio digital</p>
           </div>
         </Link>
 
         <nav className="flex items-center gap-5 flex-wrap">
           <Link to="/" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Inicio</Link>
-          <Link to="/browse" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Biblioteca</Link>
           <Link to="/orientacion" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Orientación</Link>
+          <a
+            href="https://campus.digitalhall.com.mx"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-hall-gold font-semibold hover:brightness-110 transition-colors"
+          >
+            Campus
+          </a>
+          <Link to="/biblioteca" className="text-sm text-gray-300 hover:text-hall-gold transition-colors">Biblioteca</Link>
           <a
             href="https://donaxis.github.io/NotiWeb/"
             target="_blank"

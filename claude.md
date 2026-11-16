@@ -1,6 +1,21 @@
-# Biblioteca Digital Universitaria
+# HALL — Tu sala de estudio digital
 
-Repositorio científico para la universidad. Frontend estático en GitHub Pages, backend en Firebase.
+Portal del ecosistema HALL (`digitalhall.com.mx`). Este repo contiene la portada (la "puerta"),
+Orientación vocacional y la Biblioteca (repositorio científico). Frontend estático en GitHub Pages, backend en Firebase.
+
+## Mapa del sitio (acordado nov 2026)
+```
+digitalhall.com.mx  ─  HALL, tu sala de estudio digital  (la puerta, src/pages/Home.jsx)
+ ├─ Orientación   ¿Qué estudiar?          /#/orientacion   (este repo)
+ ├─ Campus        Aprende y certifícate   campus.digitalhall.com.mx  ← el que vende (otro repo)
+ ├─ Biblioteca    Consulta e investiga    /#/biblioteca    (este repo; documentos en /#/browse)
+ └─ Noticias      NotiWeb                 donaxis.github.io/NotiWeb (externo)
+```
+- Marca: **HALL** + lema *"Tu sala de estudio digital"*. Ya no se usa "HALL Educación Digital".
+- El orden de las tarjetas es el camino del estudiante; Campus va destacado (dorado).
+- URLs llevan `#` por HashRouter (GitHub Pages). Quitarlo requiere migrar a Firebase Hosting.
+- Pendientes a decidir: login único entre Biblioteca y Campus (hoy son Firebase distintos);
+  mover Noticias a `noticias.digitalhall.com.mx`.
 
 ## Stack
 - React 18 + Vite + Tailwind CSS
@@ -17,8 +32,11 @@ src/
   firebase/     config.js, auth.js, firestore.js, storage.js
   contexts/     AuthContext.jsx  — sesión de usuario + isAdmin
   hooks/        useDocuments.js  — carga documentos con estado
-  components/   Header, Footer, SearchBar, SectionFilter, DocumentCard, PDFViewer, ProtectedRoute
-  pages/        Home, Browse, Document, Login, Admin
+  components/   Header, Footer, SearchBar, SectionFilter, DocumentCard, PDFViewer, ProtectedRoute,
+                CareerRadar, AreaFilter (Orientación)
+  data/         careers.json — carreras y puntaje por área (Orientación)
+  pages/        Home (portal), Orientacion, Biblioteca (portada de la biblioteca),
+                Browse, Document, Login, Admin
   constants.js  — SECTIONS array
 ```
 
@@ -74,11 +92,20 @@ Los usuarios se autentican vía Moodle (unibravo.org/moodle). El flujo planeado:
 - El código para esto ya está en src/pages/Login.jsx y src/firebase/auth.js
 
 ## Proyecto hermano: DigitalHall Campus (cursos) — en desarrollo
+
+> ⚠️ **LÍMITE DE ÁREAS — NO CRUZAR**
+> Campus es donde se imparten los cursos. **Todo lo interno de Campus le corresponde a la otra sesión**:
+> su código, diseño, nombre/marca, cursos, contenido, precios, pagos, registro de alumnos,
+> certificados, su Firebase (`digitalhall-campus`), su hosting y su DNS.
+> **Esta sesión solo se encarga de cómo se *presenta y enlaza* Campus desde `digitalhall.com.mx`**
+> (tarjeta en la portada y enlace del menú). Si algo de Campus parece necesitar cambios,
+> no lo hagas ni lo propongas como tarea propia: díselo al usuario para que lo lleve a la otra sesión.
+
 - URL: `https://campus.digitalhall.com.mx` (portada publicada, nov 2026)
 - Proyecto **separado**: repo `github.com/DonAxis/digitalhall-campus`, Firebase propio (`digitalhall-campus`), Firebase Hosting (no GitHub Pages).
 - Se construye en **otra sesión de VS Code** (`D:\trabajando\cursitos\plataforma`). Desde aquí **no se toca su código**; los cambios se piden a través del usuario.
-- Nombre de marca aún no definitivo ("HALL Campus" provisional). Usa el mismo logo (`/logoHall.png`).
-- Desde la biblioteca solo se enlaza a Campus (header / sección de plataformas en Home).
+- Su nombre y su marca los decide la otra sesión. Aquí se muestra como "Campus".
+- Desde aquí solo se enlaza a Campus (menú del header y tarjeta destacada en Home).
 
 ## Secciones disponibles
 Ciencias Básicas · Ingeniería y Tecnología · Ciencias de la Salud · Ciencias Sociales · Humanidades · Computación/TI · Tesis y Grado · Revistas y Artículos
