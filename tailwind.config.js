@@ -28,6 +28,8 @@ export default {
       },
       fontFamily: {
         serif: ['Georgia', 'Cambria', 'Times New Roman', 'serif'],
+        display: ['"Instrument Serif"', 'Georgia', 'serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
       },
     },
   },
